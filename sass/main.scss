@@ -1,0 +1,21 @@
+@import './vendors/normilize';
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './base/reset';
+@import './base/common';
+@import './vendors/hidden';
+
+@import './components/container';
+@import './components/modal';
+@import './components/logo';
+@import './components/button';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/functional';
+@import './layout/team';
+@import './layout/client';
+@import './layout/footer';
+@import './layout/portfolio';

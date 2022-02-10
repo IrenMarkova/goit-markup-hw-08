@@ -1,0 +1,11 @@
+.btn {
+  min-width: 200px;
+  min-height: 50px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  @include font(16px, 700, 30px, 0.06em);
+  color: var(--third-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
