@@ -24,8 +24,8 @@
     height: auto;
   }
 }
-.filter__item:not(:first-child) {
-  margin-left: 8px;
+.filter__item:not(:last-child) {
+  margin-right: 8px;
 
   &:nth-child(-n + 3) {
     @media screen and (max-width: 767px) {

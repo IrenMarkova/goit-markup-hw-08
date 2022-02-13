@@ -53,5 +53,7 @@
   }
 }
 .features-list__text {
-  @include font($lh: 24px);
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
 }

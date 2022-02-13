@@ -19,6 +19,10 @@
   padding: 40px;
   position: relative;
   margin: 15px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.8);
     transition: transform var(--duration-second) var(--timing-main);
@@ -29,10 +33,6 @@
     min-height: 609px;
   }
   @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
@@ -69,9 +69,16 @@
 
 .modal__title {
   text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  letter-spacing: 0.03em;
   color: var(--second-text-color);
   margin-bottom: 12px;
-  @include font(20px, 700, 23px, 0.03em);
+
+  @include desk {
+    line-height: calc(30 / 20);
+  }
 }
 
 .modal_form {
@@ -111,10 +118,14 @@
   transition: border-color var(--duration-main) var(--timing-main);
 
   &::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
+    font-size: 14px;
+    line-height: calc(16 / 14);
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+    @include desk {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
   }
 
   &:focus {
@@ -143,11 +154,18 @@
 }
 
 .form__check-text {
-  @include font(14px, null, 24px, 0.03em);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+
   color: var(--main-text-color);
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  @include desk {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 .form__label-link {
   color: var(--accent-color);
