@@ -111,7 +111,7 @@
   padding: 63px 24px;
   transform: translateY(100%);
   transition: transform var(--duration-main) var(--timing-main);
-  overflow: auto;
+  // overflow: auto;
 
   .project-list__item:hover &,
   .project-list__item:focus & {
