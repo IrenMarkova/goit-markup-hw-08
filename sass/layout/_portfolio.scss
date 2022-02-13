@@ -1,16 +1,37 @@
 .project {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .project__filter {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 50px;
+  }
 }
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  @include tab {
+    justify-content: center;
+    height: auto;
+  }
 }
 .filter__item:not(:first-child) {
   margin-left: 8px;
+
+  &:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .filter__btn {
@@ -45,16 +66,24 @@
 }
 
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
   margin-bottom: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 .project-list__item {
-  width: calc((100% - 30px * 3) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
   transition: box-shadow var(--duration-main) var(--timing-main);
+  @include tab {
+    width: calc((100% - 30px * 2) / 2);
+    margin-right: 30px;
+  }
+  @include desk {
+    width: calc((100% - 30px * 3) / 3);
+    // margin-right: 30px;
+  }
 
   &:hover,
   &:focus {
@@ -73,7 +102,7 @@
   top: 0;
   left: 0;
   background-color: rgba(33, 150, 243, 0.9);
-  height: 100%;
+  height: 101%;
   width: 100%;
   font-size: 18px;
   line-height: calc(28 / 18);

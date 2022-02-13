@@ -5,13 +5,33 @@
 }
 
 .footer-box {
-  display: flex;
-  /* align-items: flex-start; */
-  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  @include tab {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  @include desk {
+    justify-content: left;
+    text-align: left;
+    // max-width: 100%;
+  }
 }
-.box-adress {
-  max-width: 231px;
-}
+
+// .box-adress {
+//   text-align: center;
+//   @include tab {
+//     text-align: center;
+//   }
+//   @include desk {
+//     text-align: left;
+//   }
+// }
 .box-adress__logo {
   display: block;
   margin-bottom: 20px;
@@ -33,17 +53,35 @@
 
 .footer-address__link {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: var(--third-text-color);
+  @include desk {
+    margin-bottom: 9px;
+  }
 }
 
 .address-list__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include desk {
+    margin-bottom: 9px;
+  }
+}
+.address-list__tel {
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-bottom: 60px;
+  }
 }
 
 .footer__box-social {
-  margin-top: 12px;
-  margin-left: 70px;
+  @include tab {
+    margin-top: 12px;
+    margin-left: 165px;
+  }
+  @include desk {
+    margin-top: 12px;
+    margin-left: 70px;
+  }
 }
 
 .box-social__title {
@@ -82,9 +120,16 @@
   fill: var(--third-text-color);
 }
 
+.box-social-list__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
 .footer__subscription {
-  margin-top: 12px;
-  margin-left: 93px;
+  @include desk {
+    margin-top: 12px;
+    margin-left: 93px;
+  }
 }
 
 .subscription__text {
@@ -99,11 +144,16 @@
 }
 
 .subscription-box {
-  @extend %center-list;
-  text-align: center;
+  @include desk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 .subscription-box__input {
-  width: 358px;
+  margin: 0 auto;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -114,8 +164,11 @@
   color: var(--third-text-color);
   transition: border-color var(--duration-main) var(--timing-main);
 
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
   &::placeholder {
-    /* padding-left: 16px; */
     font-size: 16px;
     line-height: calc(20 / 16);
     letter-spacing: 0.03em;
@@ -127,9 +180,17 @@
     border-color: var(--accent-color);
     outline: none;
   }
+  @include tab {
+    width: 450px;
+  }
+  @include desk {
+    width: 358px;
+  }
 }
 
 .subscription-box__btn {
+  max-width: 200px;
+  margin: 0 auto;
   @extend %center-list;
 }
 .subscription-box__icon {
