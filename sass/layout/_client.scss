@@ -21,13 +21,12 @@
 .client-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  justify-content: space-between;
   margin-bottom: -30px;
 }
 .client-list__item {
   @extend %center-list;
   width: calc((100% - 30px * 2) / 2);
-  margin-right: 30px;
   margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
@@ -39,7 +38,8 @@
   }
 }
 .client-list__link {
-  width: 170px;
+  // width: 210px;
+  width: 100%;
   height: 92px;
   @extend %center-list;
   border: 1px solid var(--icon-main-color);
