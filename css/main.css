@@ -270,7 +270,7 @@ summary {
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --icon-main-color: #afb1b8;
-  --duration-main: 250ms;
+  --duration-main: 2250ms;
   --duration-second: 500ms;
   --timing-main: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -761,8 +761,10 @@ body {
   width: 100vw;
   height: 100vh;
   padding-top: 10px;
-  padding-bottom: 48px;
+  padding-bottom: 58px;
   z-index: 1;
+  transform: translate(0);
+  transition: transform var(--duration-second) var(--timing-main), visibility var(--duration-second) var(--timing-main);
 }
 
 .mob-menu .container {
@@ -770,6 +772,10 @@ body {
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.mob-menu.is-hidden {
+  transform: translate(100%);
 }
 
 .open-btn,

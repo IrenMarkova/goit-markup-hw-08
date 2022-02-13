@@ -137,15 +137,20 @@
   width: 100vw;
   height: 100vh;
   padding-top: 10px;
-  padding-bottom: 48px;
+  padding-bottom: 58px;
   z-index: 1;
-
+  transform: translate(0);
+  transition: transform var(--duration-second) var(--timing-main),
+    visibility var(--duration-second) var(--timing-main);
   .container {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
   }
+}
+.mob-menu.is-hidden {
+  transform: translate(100%);
 }
 
 .open-btn,
