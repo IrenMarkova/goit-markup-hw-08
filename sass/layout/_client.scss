@@ -48,13 +48,13 @@
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
   color: var(--icon-main-color);
-  transition: border-color var(--duration-main) var(--timing-main),
-    color var(--duration-main) var(--timing-main);
+  transition: color var(--duration-main) var(--timing-main),
+    border-color var(--duration-main) var(--timing-main);
 
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
     color: var(--accent-color);
+    border-color: var(--accent-color);
   }
 }
 .client-list__icon {
